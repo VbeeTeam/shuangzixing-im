@@ -1,0 +1,178 @@
+syntax = "proto3";
+package com.starpool.insures.consultcenter.infrastructure.proto;
+
+//以结构体为单位
+option java_multiple_files = true;
+
+/**
+ * 返回值枚举
+ */
+enum ReturnStatus {
+    RETURN_STATUS_UNSPECIFIED = 0;
+    SUCCESS = 1;//成功
+    FALSE   = 2;//未知原因失败
+    ERROR   = 3;//因业务逻辑发生错误
+    INCOMPLETE = 4;//数据不完整
+}
+
+/**
+ * 消息类型
+ */
+enum MsgType {
+   MSG_TYPE_UNSPECIFIED = 0;
+   TEXT = 1;
+   IMAGE = 2;
+   VIDEO = 3;
+   VOICE = 4;
+   SYSTEM = 5;
+}
+
+/**
+ * 链接类型
+ */
+enum LinkType {
+    LINK_TYPE_UNSPECIFIED = 0;
+    PLAN = 1;
+    QA = 2;
+}
+
+/**
+ * 通用消息
+ */
+message CommonMessage {
+    ReturnStatus status = 1;
+    string message = 2;
+}
+
+/**
+ * 客户消息
+ */
+message ConsultMessage {
+    string customerId = 1;//客户id
+    uint64 adviserId = 2;//顾问id
+    MsgType messageType = 3;//咨询消息类型
+    string messageContent = 4;//咨询消息内容
+}
+
+/**
+ * 回复客户消息
+ */
+message ConsultMessageReply {
+    string customerId = 1;//客户id
+    MsgType replyType = 2;//回复消息类型
+    string replyContent = 3;//回复消息内容
+}
+
+/**
+ * 顾问用户信息
+ */
+message ConsultUserInfo {
+    uint64 id = 1;
+    string userName = 2; // 用户名称
+    string avatar = 3; // 用户头像
+}
+
+/**
+ * 消息列表客户
+ */
+message ConsultMsgCustomer {
+    uint64 adviserId = 1; // 顾问id
+    string customerId = 2; // 客户id
+    string customerNickName = 3; // 客户昵称
+    string customerHeadImg = 4; // 客户头像
+    uint32 unReadCount = 5; // 未读数
+    string lastMsgContent = 6; // 最后一条消息内容
+    string lastMsgTime = 7; // 最后一条消息接收时间
+    uint64 userId = 8; // 客户表id
+    string customerUserId = 9; // 客户userId
+}
+
+/**
+ * 获取聊天消息列表
+ */
+message ConsultCustomerList {
+    uint32 totalUnReadCount = 1; // 总未读数
+    repeated ConsultMsgCustomer customerList = 2; // 客户列表
+}
+
+/**
+ * 获取聊天消息列表
+ */
+message ConsultGetMsgList {
+    string createTime = 1; // 消息时间
+    string customerId = 2; // 客户id
+}
+
+/**
+ * 聊天消息
+ */
+message ConsultMsg {
+    uint64 adviserId = 1; // 顾问id
+    string customerId = 2; // 客户id
+    MsgType type = 3; // 消息类型
+    string content = 4; // 内容
+    bool markRead = 5; // 已读标记
+    string createTime = 6; // 创建时间
+    string direction = 7; // 方向，接收/回复
+}
+
+/**
+ * 聊天消息列表
+ */
+message ConsultMsgList {
+    uint32 unReadCount = 1; // 未读消息数
+    string customerId = 2; // 客户id
+    repeated ConsultMsg msgList = 3; // 消息列表
+}
+
+/**
+ * 客户端阅读消息事件
+ */
+message ReadMessage {
+    string customerId = 1;
+}
+
+/**
+ * 修改密码
+ */
+message UpdatePassword {
+    string newPassword = 1;
+}
+
+/**
+ * 设置在线状态
+ */
+message SetOnlineState {
+    bool state = 1; // 是否在线 在线true 离线false
+}
+
+/**
+ * 发送方案或问卷链接
+ */
+message PutLink {
+    string customerId = 1;
+    LinkType type = 2; // 链接类型
+    string url = 3; // 链接URL
+}
+
+/**
+ * 设置客户会话状态
+ */
+message SetSessionStatus {
+    string customerId = 1; // 客户id
+    bool closed = 2; // 会话是否关闭 关闭true 正常false
+}
+
+/**
+ * 获取客户消息列表传参
+ */
+message GetCustomerList {
+    bool closed = 1; // 会话是否关闭 关闭true 正常false
+}
+
+/**
+ * 重复登录
+ */
+ message RepeatLogin {
+    bool repeatLoginStatus = 1; //是否重复登录
+}

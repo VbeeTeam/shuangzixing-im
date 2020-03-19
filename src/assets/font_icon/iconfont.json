@@ -1,0 +1,93 @@
+{
+  "id": "1591460",
+  "name": "IM svg",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13192174",
+      "name": "Tabbar-icon_message_s",
+      "font_class": "Tabbar-icon_message_s",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "12608842",
+      "name": "icon_user",
+      "font_class": "user",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "12608869",
+      "name": "icon_lock",
+      "font_class": "lock",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "12609003",
+      "name": "Tabbar-icon_message_n",
+      "font_class": "message",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12609055",
+      "name": "Tabbar-icon_mine_n",
+      "font_class": "mine",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12609092",
+      "name": "icon_拍照",
+      "font_class": "paizhao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "12609093",
+      "name": "icon_表情",
+      "font_class": "biaoqing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12609094",
+      "name": "icon_语音",
+      "font_class": "yuyin",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12609095",
+      "name": "icon_问卷",
+      "font_class": "wenjuan",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "12609096",
+      "name": "icon_照片",
+      "font_class": "zhaopian",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "12609097",
+      "name": "icon_知识库",
+      "font_class": "zhishiku",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "12609098",
+      "name": "icon_方案",
+      "font_class": "fangan",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    }
+  ]
+}

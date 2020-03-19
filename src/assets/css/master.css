@@ -1,0 +1,203 @@
+/*css-reset*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+figcaption,
+figure,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1 'Microsoft YaHei', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+}
+h1 {
+    font-size: 18px;
+    font-weight: normal;
+}
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: 'Courier New', Courier, monospace;
+}
+small {
+    font-size: 12px;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #535353;
+}
+abbr[title],
+acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+q:before,
+q:after {
+    content: '';
+}
+legend {
+    color: #000;
+}
+fieldset,
+img {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+hr {
+    border: 0;
+    height: 1px;
+}
+* {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background: #f5f5f5;
+    padding-bottom: 52px;
+    color: #a1a1a1;
+}
+.d-n {
+    display: none;
+}
+input[type='submit'] {
+    background: none;
+    border: none;
+}
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+.fullimg {
+    width: 100%;
+    height: 100%;
+}
+.fullwidth {
+    width: 100%;
+}
+input {
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.blue_btn {
+    width: 90%;
+    background: #0096ff;
+    color: #fff;
+    font-size: 20px;
+    line-height: 48px;
+    margin: 0 auto;
+    margin-top: 33px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #008def;
+}
+.short_bluebtn {
+    width: 110px;
+    background: #0096ff;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+}
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: none;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: none transparent;
+}
+input:focus::-webkit-input-placeholder {
+    text-indent: -999em;
+    z-index: -20;
+}
+.noscroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+/*body{background: #da4453}*/
+/*.loading{ position: absolute; top: 100px; bottom: 0; left: 0; right: 0; margin: auto; width: 200px; background: url(../images/loading.jpg) no-repeat; background-size: 200px; }*/
+.aa {
+    color: #da4453;
+}
+
+/*iconfont*/
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
